@@ -31,18 +31,20 @@ async function createDriver(name,platform,version,device) {
         }
     }
 
-   
-//Creating RemoteDriver By Poiniting Hub URL to BrowserStack's Remote Hub
-let promise=new Promise(function(resolve,reject){
-    console.log("Driver getting initialized");
-    resolve();
-});
-
-promise.then(function(){
-    driver = wd.promiseRemote('http://'+LT_USERNAME+':'+LT_ACCESS_KEY+'@beta-hub.lambdatest.com/wd/hub');
-    driver.init(capabilities);
+    const driver = wd.promiseChainRemote('http://'+LT_USERNAME+':'+LT_ACCESS_KEY+'@beta-hub.lambdatest.com/wd/hub');
     
-    });
+    test('appium renders', async () => {
+        jest.setTimeout(50000);
+        await driver.init(capabilities);
+        await driver.sleep(20000); 
+        await driver.quit();
+      //expect(await driver.hasElementByAccessibilityId('testview')).toBe(true);
+      //expect(await driver.hasElementByAccessibilityId('notthere')).toBe(false);
+    },50000);
+
+
+    return driver;
+    
  
 };
 

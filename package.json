@@ -5,7 +5,7 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "parallel": "jest parallel.test.js --maxConcurrency=4 --detectOpenHandles"
+    "parallel": "jest parallel.test.js --maxConcurrency=3 --detectOpenHandles --forceExit"
   },
   "keywords": [],
   "author": "",
