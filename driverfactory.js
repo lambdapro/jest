@@ -1,8 +1,8 @@
 var wd = require('wd');
 var assert = require('assert');
 
-const LT_ACCESS_KEY = process.env.LT_ACCESS_KEY //Fetching BROWSERSTACK_ACCESS_KEY FROM THE ENVIRONMENT
-const LT_USERNAME = process.env.LT_USERNAME //Fetching BROWSERSTACK_USERNAME FROM THE ENVIRONMENT
+const LT_ACCESS_KEY = process.env.LT_ACCESS_KEY // FROM THE ENVIRONMENT
+const LT_USERNAME = process.env.LT_USERNAME // FROM THE ENVIRONMENT
 
 
 async function createDriver(name,platform,version,device) {
