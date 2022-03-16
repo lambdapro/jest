@@ -1,0 +1,21 @@
+{
+  "name": "jest_testing_basics",
+  "version": "1.0.0",
+  "description": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "parallel": "jest parallel.test.js --maxConcurrency=4 --detectOpenHandles"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chromium-binary": "^83.0.4103-116",
+    "jest": "^27.0.6",
+    "wd": "^1.13.0"
+  },
+  "dependencies": {
+    "browserstack-local": "^1.4.8"
+  }
+}
