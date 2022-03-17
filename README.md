@@ -21,7 +21,8 @@ set LT_ACCESS_KEY="YOUR ACCESS KEY"`
 
 Android:
 Custom_id=android
-ios
+<br>
+ios:
 Custom_id=ios
 
 Add the custom id in the app capability
